@@ -12,7 +12,8 @@
 		"build:extension": "tsc --project tsconfig.ext.json && cp extension/manifest.json dist/extension/ && cp extension/popup.html dist/extension/",
 		"build:node": "tsc --project tsconfig.node.json && cp package.json dist/nodejs/ && cp README.md dist/nodejs/ && cp LICENSE dist/nodejs/",
 		"watch:extension": "tsc --project tsconfig.ext.json --watch",
-		"test": "ts-node test/test.ts"
+		"test": "ts-node test/test.ts",
+		"start": "node dist/nodejs/index.js"
 	},
 	"keywords": [
 		"automation",
@@ -28,5 +29,8 @@
 		"puppeteer": "^10.1.0",
 		"ts-node": "^10.1.0",
 		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"puppeteer-extension": "^0.3.0"
 	}
 }
